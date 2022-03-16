@@ -1,4 +1,4 @@
-package com.example.springboot;
+package com.mon.assignment;
 
 import java.util.Arrays;
 

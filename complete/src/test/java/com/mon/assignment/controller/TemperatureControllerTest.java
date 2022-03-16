@@ -1,4 +1,5 @@
-package com.example.springboot;
+/*
+package com.mon.assignment.controller;
 
 import static org.hamcrest.Matchers.equalTo;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
@@ -15,15 +16,15 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
 @SpringBootTest
 @AutoConfigureMockMvc
-public class HelloControllerTest {
+public class TemperatureControllerTest {
 
 	@Autowired
 	private MockMvc mvc;
 
 	@Test
-	public void getHello() throws Exception {
-		mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.APPLICATION_JSON))
-				.andExpect(status().isOk())
-				.andExpect(content().string(equalTo("Greetings from Spring Boot!")));
+	public void postNotifications() throws Exception {
+		mvc.perform(MockMvcRequestBuilders.post("/notifications").accept(MediaType.APPLICATION_JSON))
+				.andExpect(status().isOk());
 	}
 }
+*/
