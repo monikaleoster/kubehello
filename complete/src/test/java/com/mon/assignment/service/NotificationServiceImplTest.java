@@ -25,6 +25,13 @@ public class NotificationServiceImplTest {
        Map<Double,Integer> result =notificationService.notify(temps,mockThermoMeter(),false);
         Assert.assertEquals(2,result.get(0d).intValue());
     }
+
+    @Test
+    public void givenThermometerAndSourceAndRepeatedNotificationIsEnabledTempWhenProcessedThenNoRepeatedNotifications() {
+        Double[] temps ={0d,0.5d,0.2d,0d,1.5d,0d};
+        Map<Double,Integer> result =notificationService.notify(temps,mockThermoMeter(),true);
+        Assert.assertEquals(3,result.get(0d).intValue());
+    }
     @Test
     public void givenThermometerAndSourceTempAlwaysInThresholdWhenProcessedThenNoRepeatedNotifications() {
         Double[] temps ={0d,0.5d,0.2d,0d,0.5d,0d};
