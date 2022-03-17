@@ -49,3 +49,10 @@ Notifications need not be sent with threshold of +-0.5 for both. Payload would l
     }
   }
 }
+
+##6. Response will return number of notifications for each freezing & boiling temperature
+[source,json,subs="+attributes"]
+----
+{
+  "0.0": 2
+}
